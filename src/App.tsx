@@ -1,11 +1,13 @@
-import { useState } from "react";
 import "./App.css";
-import Page from "./features/PropsHeading";
+import { AppRoutes } from "./routes";
+import { AppProvider } from "./providers/app";
 
 function App() {
   return (
     <div className="App">
-      <Page />
+      <AppProvider>
+        <AppRoutes />
+      </AppProvider>
     </div>
   );
 }

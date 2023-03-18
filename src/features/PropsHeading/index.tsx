@@ -1,7 +1,7 @@
 import Section from "./components/Section";
 import Heading from "./components/Heading";
 
-export default function Page() {
+export default function PropsHeading() {
   return (
     <Section>
       <Heading level={1}>Title</Heading>

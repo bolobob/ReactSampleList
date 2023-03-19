@@ -1,13 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
 import clsx from "clsx";
+import { LevelContext } from "../contexts/LevelContext";
 
-export default function Heading({
-  level,
-  children,
-}: {
-  level: number;
-  children: ReactNode;
-}) {
+export default function Heading({ children }: { children: ReactNode }) {
+  const level = useContext(LevelContext);
   switch (level) {
     case 1:
       return <h1 className={clsx("text-2xl")}>{children}</h1>;

@@ -1,5 +1,5 @@
 import { Outlet, useRoutes } from "react-router-dom";
-import { ContextRoutes } from "../features/Context/routes";
+import { ContextRoutes } from "../features/context/routes";
 
 const App = () => {
   return <Outlet />;

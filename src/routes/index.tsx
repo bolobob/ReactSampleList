@@ -1,9 +1,16 @@
-import { useRoutes } from "react-router-dom";
-import { Headings } from "../features/PropsHeading";
+import { Outlet, useRoutes } from "react-router-dom";
+import { ContextRoutes } from "../features/PropsHeading/routes";
 
+const App = () => {
+  return <Outlet />;
+};
 export const AppRoutes = () => {
   const element = useRoutes([
-    { path: "/props_heading", element: <Headings /> },
+    {
+      path: "/",
+      element: <App />,
+      children: [{ path: "/context/*", element: <ContextRoutes /> }],
+    },
   ]);
 
   return <>{element}</>;

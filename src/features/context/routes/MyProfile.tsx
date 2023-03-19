@@ -1,5 +1,5 @@
-import { ContentLayout } from "../../../components/Layout/ContentLayout";
 import ProfilePage from "../components/ProfilePage";
+import { ContentLayout } from "../../../components/Layout";
 
 export const MyProfile = () => {
   return (

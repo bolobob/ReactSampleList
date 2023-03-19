@@ -1,5 +1,5 @@
-import { ContentLayout } from "../../../components/Layout/ContentLayout";
 import HeadingList from "../components/HeadingList";
+import { ContentLayout } from "../../../components/Layout";
 
 export const Headings = () => {
   return (

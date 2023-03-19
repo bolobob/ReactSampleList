@@ -1,7 +1,7 @@
-import Section from "./components/Section";
-import Heading from "./components/Heading";
+import Section from "./Section";
+import Heading from "./Heading";
 
-export default function PropsHeading() {
+export default function HeadingList() {
   return (
     <Section>
       <Heading level={1}>Title</Heading>

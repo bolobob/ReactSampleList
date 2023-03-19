@@ -1,9 +1,9 @@
 import { useRoutes } from "react-router-dom";
-import HeadingList from "../features/PropsHeading/components/HeadingList";
+import { Headings } from "../features/PropsHeading";
 
 export const AppRoutes = () => {
   const element = useRoutes([
-    { path: "/props_heading", element: <HeadingList /> },
+    { path: "/props_heading", element: <Headings /> },
   ]);
 
   return <>{element}</>;

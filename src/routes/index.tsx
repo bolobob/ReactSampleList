@@ -1,8 +1,13 @@
 import { Outlet, useRoutes } from "react-router-dom";
 import { ContextRoutes } from "../features/context/routes";
+import { MainLayout } from "../components/Layout/MainLayout";
 
 const App = () => {
-  return <Outlet />;
+  return (
+    <MainLayout>
+      <Outlet />
+    </MainLayout>
+  );
 };
 export const AppRoutes = () => {
   const element = useRoutes([

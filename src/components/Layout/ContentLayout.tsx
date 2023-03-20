@@ -9,7 +9,7 @@ export const ContentLayout = ({
   title: string;
 }) => {
   return (
-    <div className={clsx("container")}>
+    <div className={clsx(["container", "p-6"])}>
       <div>
         <h1 className={clsx("text-3xl")}>{title}</h1>
       </div>

@@ -12,7 +12,10 @@ const App = () => {
 export const AppRoutes = () => {
   const element = useRoutes([
     {
-      path: import.meta.env.VITE_GITHUB_PAGES ? "/react-sample-list/" : "/",
+      path:
+        import.meta.env.VITE_GITHUB_PAGES === "true"
+          ? "/react-sample-list"
+          : "/",
       element: <App />,
       children: [{ path: "/context/*", element: <ContextRoutes /> }],
     },

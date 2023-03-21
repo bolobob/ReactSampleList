@@ -12,7 +12,7 @@ const App = () => {
 export const AppRoutes = () => {
   const element = useRoutes([
     {
-      path: "/",
+      path: import.meta.env.BASE_URL,
       element: <App />,
       children: [{ path: "/context/*", element: <ContextRoutes /> }],
     },

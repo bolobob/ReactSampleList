@@ -42,6 +42,8 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: true
+      - name: Copy index.html to 404.html
+        run: npm run postbuild
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

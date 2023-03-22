@@ -1,8 +1,21 @@
 import "./App.css";
 import { AppRoutes } from "./routes";
 import { AppProvider } from "./providers/app";
+import { useEffect } from "react";
 
-function App() {
+declare global {
+  interface Window {
+    dataLayer: Array<object>;
+  }
+}
+
+const App = () => {
+  useEffect(() => {
+    window.dataLayer.push({
+      randomNumber: Math.floor(10000 * Math.random()),
+    });
+  }, []);
+
   return (
     <div className="App">
       <AppProvider>
@@ -10,6 +23,6 @@ function App() {
       </AppProvider>
     </div>
   );
-}
+};
 
 export default App;

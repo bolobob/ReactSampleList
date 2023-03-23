@@ -14,6 +14,9 @@ const App = () => {
     window.dataLayer.push({
       randomNumber: Math.floor(10000 * Math.random()),
     });
+    window.dataLayer.push({
+      event: "user-property-push",
+    });
   }, []);
 
   return (

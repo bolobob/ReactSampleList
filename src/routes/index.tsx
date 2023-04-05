@@ -17,7 +17,10 @@ export const AppRoutes = () => {
           ? "/react-sample-list"
           : "/",
       element: <App />,
-      children: [{ path: "context/*", element: <ContextRoutes /> }],
+      children: [
+        { path: "context/*", element: <ContextRoutes /> },
+        { path: "form", element: <div>hoge</div> },
+      ],
     },
   ]);
 

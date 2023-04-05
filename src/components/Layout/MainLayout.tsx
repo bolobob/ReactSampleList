@@ -59,6 +59,9 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
                 text="useContextを使ってみた（関係ないコンポーネントが混ざってる）"
               />
             </li>
+            <li>
+              <SidebarItem to="/form" text="react-hook-formのuseFieldArray" />
+            </li>
           </ul>
         </nav>
       </div>

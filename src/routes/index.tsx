@@ -1,6 +1,7 @@
 import { Outlet, useRoutes } from "react-router-dom";
 import { ContextRoutes } from "../features/context/routes";
 import { MainLayout } from "../components/Layout/MainLayout";
+import { FieldArrayForm } from "../features/form";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
     </MainLayout>
   );
 };
+
 export const AppRoutes = () => {
   const element = useRoutes([
     {
@@ -19,7 +21,7 @@ export const AppRoutes = () => {
       element: <App />,
       children: [
         { path: "context/*", element: <ContextRoutes /> },
-        { path: "form", element: <div>hoge</div> },
+        { path: "form", element: <FieldArrayForm /> },
       ],
     },
   ]);

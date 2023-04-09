@@ -60,7 +60,10 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
               />
             </li>
             <li className={clsx(["px-5"])}>
-              <SidebarItem to="/form" text="react-hook-formのuseFieldArray" />
+              <SidebarItem
+                to="/form/field_array_form"
+                text="react-hook-formのuseFieldArray"
+              />
             </li>
           </ul>
         </nav>

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import { Link, useMatch } from "react-router-dom";
 
 /**
@@ -34,6 +34,24 @@ const SidebarItem = ({ to, text }: { to: string; text: string }) => {
 };
 
 export const MainLayout = ({ children }: { children: ReactNode }) => {
+  const menuItems = useMemo(
+    () =>
+      [
+        { to: "/context/props_headings", text: "useContextを使ってみた" },
+        {
+          to: "/context/my_profile",
+          text: "useContextを使ってみた（関係ないコンポーネントが混ざってる）",
+        },
+        {
+          to: "/form/field_array_form",
+          text: "react-hook-formのuseFieldArray",
+        },
+      ] as {
+        to: string;
+        text: string;
+      }[],
+    []
+  );
   return (
     <div
       className={clsx([
@@ -47,24 +65,11 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
       <div className={clsx(["basis-80", "grow"])}>
         <nav>
           <ul className={clsx(["list-disc", "list-inside"])}>
-            <li className={clsx(["px-5"])}>
-              <SidebarItem
-                to="/context/props_headings"
-                text="useContextを使ってみた"
-              />
-            </li>
-            <li className={clsx(["px-5"])}>
-              <SidebarItem
-                to="/context/my_profile"
-                text="useContextを使ってみた（関係ないコンポーネントが混ざってる）"
-              />
-            </li>
-            <li className={clsx(["px-5"])}>
-              <SidebarItem
-                to="/form/field_array_form"
-                text="react-hook-formのuseFieldArray"
-              />
-            </li>
+            {menuItems.map(({ to, text }) => (
+              <li key={to} className={clsx(["px-5"])}>
+                <SidebarItem to={to} text={text} />
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

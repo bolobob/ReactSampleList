@@ -46,6 +46,10 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
           to: "/form/field_array_form",
           text: "react-hook-formのuseFieldArray",
         },
+        {
+          to: "/transition/list",
+          text: "リストの移動アニメーション",
+        },
       ] as {
         to: string;
         text: string;

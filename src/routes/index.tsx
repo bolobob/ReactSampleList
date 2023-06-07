@@ -3,6 +3,7 @@ import { ContextRoutes } from "../features/context/routes";
 import { MainLayout } from "../components/Layout/MainLayout";
 import { FormRoutes } from "../features/form/routes";
 import { TransitionRoutes } from "../features/transition/routes";
+import { AutocompleteRoutes } from "../features/autocomplete";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ export const AppRoutes = () => {
         { path: "context/*", element: <ContextRoutes /> },
         { path: "form/*", element: <FormRoutes /> },
         { path: "transition/*", element: <TransitionRoutes /> },
+        { path: "autocomplete/*", element: <AutocompleteRoutes /> },
       ],
     },
   ]);

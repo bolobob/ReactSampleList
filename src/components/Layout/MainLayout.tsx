@@ -50,6 +50,10 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
           to: "/transition/list",
           text: "リストの移動アニメーション",
         },
+        {
+          to: "/autocomplete",
+          text: "AutocompleteのgroupBy",
+        },
       ] as {
         to: string;
         text: string;
